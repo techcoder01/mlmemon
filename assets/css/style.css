@@ -2235,9 +2235,19 @@ p {
 	background-color: #334155;
 }
 
-.dark-theme .work-experiance-card .work-experiance-slider li .info .icon {
-	background-color: var(--dark-theme-black);
+.dark-theme .work-experiance-card .work-experiance-slider li:first-child .info .icon {
+	background-color: var(--dark-theme-bg); /* Pehla icon ka color */
 }
+
+.dark-theme .work-experiance-card .work-experiance-slider li:nth-child(2) .info .icon {
+	background-color: var(--dark-theme-bg)
+}
+
+.dark-theme .work-experiance-card .work-experiance-slider li:not(:first-child):not(:nth-child(2)) .info .icon {
+	background-color: var(--dark-theme-white); /* Baaki icons ka color */
+}
+
+
 
 .dark-theme .content-box-card .counter-area .circle-text .circle-image {
 	display: none;
